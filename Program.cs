@@ -9,16 +9,9 @@ namespace ConsoleApp12
         static void Main(string[] args)
         {
             var n = 5;
-            var m = MadeMatrix.Made(n);
-            for(int i = 0; i < n; i++)
-            {
-                for(int j=0;j < n; j++)
-                {
-                    Console.Write($"{ m[i, j]} ");
-                }
-                Console.WriteLine();
-            }
-            var t = new maxmin( m);
+            var m = new Matrix(n);
+            Console.WriteLine(m);
+            var t = new MaxMin(m);
             Console.WriteLine(t.Max());
         }
     }

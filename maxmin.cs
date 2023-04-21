@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp12
 {
-    public class maxmin
+    public class MaxMin
     {
-        public int[,] m;
-        public maxmin(int[,] m) 
+        public  int[,] m;
+        public MaxMin(Matrix mtr) 
         { 
-            this.m = m;
+            m = mtr.matr;
         }
         public  List<int> ar=new List<int>();
 
@@ -22,11 +22,9 @@ namespace ConsoleApp12
                 Thread myThread = new(Print);
                 myThread.Start(i);
             }
-            
-
             return ar.Max();
         }
-         void Print(object? obj)
+        void Print(object? obj)
         {
             
                 int min = int.MaxValue;
